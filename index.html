@@ -1,0 +1,136 @@
+<!--index.html-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Our Wedding</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="styling.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+<!--https://www.interviewbit.com/javascript-interview-questions/-->
+</head>
+<body data-spy="scroll" data-target="#mynavbar">
+<!--      add video to body-->
+    <video autoplay loop muted id="myVideo">
+        <source src="Wedding1.mp4" type="video/mp4">
+    </video>
+    <!-- Checking navbar fixed -->
+    
+<!--      add navigation bar also add scrollspy-->
+    <div id="navdiv">
+        <div role="navigation" class="navbar navbar-default fixed-top" id="mynavbar">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand">Moments Pictures</a>
+                    <button type="button" class="navbar-toggle collapsed" data-target="#navbarCollapse" data-toggle="collapse">
+                         <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div class="navbar-collapse collapse" id="navbarCollapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#promise">Gallery</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+<!--      create home eith title goal and join us-->
+    <div class="jumbotron" id="home">
+        <div class="container">
+            <h1>Moments Pictures</h1>
+            <h2>We tell Stories!</h2>
+            <p><a class="btn" href="#">Get in Touch!</a></p>
+        </div>
+    </div>
+      
+<!--      create create about sec with icons using grid system-->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <img src="images1/photoshoot.png" class="images">
+                    <h2>More than just a Photoshoot</h2>
+                    <p>Your adventure elopement is, in every sense of the word, yours. If you want to take your wedding photos in a river then go for it!<br>No two elopements look the same.For that reason, our day together can look like whatever you dream it up to be. </p>
+                </div>
+                <div class="col-md-4">
+                    <img src="images1/planning.png" class="images">
+                    <h2>Leave the Planning to us</h2>
+                    <p>OMG. Permits, locations, vendors, timeline...<br>It's overwhelming and hard to figure out! That alone can often be what holds people back from the DREAM. You shouldn't be stressin about the logistics in a season that is supposed to be filled with magic.<br><br>That's what I am here for.</p>
+                </div>
+                <div class="col-md-4">
+                    <img src="images1/call.png" class="images">
+                    <h2>Book a Quick Call</h2>
+                    <a class="btn" id="callbutton" href="#">Let's Talk!</a>
+                </div>
+            </div>
+        </div>
+    </div>
+<!--      create promise section by adding carosel-->
+    <div id="promise" class="container-fluid">
+        <div class="carousel slide" id="myCarousel" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target-"myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target-"myCarousel" data-slide-to="1"></li>
+                <li data-target-"myCarousel" data-slide-to="2"></li>
+                <li data-target-"myCarousel" data-slide-to="3"></li>
+                <li data-target-"myCarousel" data-slide-to="4"></li>
+                <li data-target-"myCarousel" data-slide-to="5"></li>
+                <li data-target-"myCarousel" data-slide-to="6"></li>
+
+            </ol>
+            <div class="carousel-inner">
+                <div class="item active" ><img src="1.jpg"><div class="carousel-caption"><h2>"Framing emotions"</h2></div></div>
+                <div class="item"><img src="2.jpg"><div class="carousel-caption"><h2>"Forever Artistic"</h2></div></div>
+                <div class="item"><img src="3.jpg"><div class="carousel-caption"><h2>"Your image is our focus"</h2></div></div>
+                <div class="item"><img src="4.jpg"><div class="carousel-caption"><h2>"Making Wonderful Story"</h2></div></div>
+                <div class="item"><img src="5.jpg"><div class="carousel-caption"><h2>"Reflect what you Desire"</h2></div></div>
+                <div class="item"><img src="6.jpg"><div class="carousel-caption"><h2>"Let your Event Shine"</h2></div></div>
+                <div class="item"><img src="7.jpg"><div class="carousel-caption"><h2>"We’re here for more Clicks"</h2></div></div>
+            </div>
+            <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#myCarousel" data-slide="next">>
+                 <span class="glyphicon glyphicon-chevron-right"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </div>
+<!--      Add footer-->
+    <div class="footer">
+        <div class="container">
+            <p>&copy; Develop With Yash</p>
+        </div>
+    </div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+<!--
+    <script>
+        window.onload = function(){
+            document.getElementById("bgvideo").play();
+        }  
+    </script>
+-->
+    <script>
+        $(function(){
+            $('.carousel').carousel({
+                interval: 5000
+            });
+        });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,247 @@
+/*body
+Give body element a relative position for scrollspy to work
+add font family to the entire page*/
+body{
+    font-family: 'Sofia',sans-serif;
+    position: relative;
+}
+/*Video 
+set the video as background and make it fixed
+Make sure it spreads over the entire page
+make sure it is behind all elements using z-index*/
+#myVideo{
+    position: fixed;
+    min-height: 100%;
+    min-width: 100%;
+    z-index: -100;
+}
+
+/*for small devices vidoe wont work, for tha we will choose a sopecific 
+picture and hide the video*/
+
+@media (max-width:768px){
+    body{
+        background: url(Sc%20wedding.png) center center fixed;
+        background-size: cover;
+    }
+    #myVideo{
+        display: none;
+    }
+}
+
+/*navigation bar using a nav bar
+also collapse
+*/
+/*
+#navdiv{
+    position: relative;
+}
+*/
+/*
+.navbar-toggler{
+    height: 40px;
+    width: 35px;
+    margin-top: 6px;
+}
+*/
+.navbar-default{
+    background: transparent;
+    border: none;
+/*    z-index: 1;*/
+    position:relative;
+}
+.navbar-default .navbar-nav > li > a{
+    color: #fff;
+}
+.navbar-default .navbar-nav > li > a:hover{
+    color: #341610;
+}
+.nav li{
+    color: white;
+    font-size: 25px;
+    margin-right: 35px;
+    padding: 10px 0px;
+}
+.nav li:hover{
+    border-bottom: 1px solid #341610;
+    padding-bottom: 9px;
+    cursor: pointer;
+}
+.navbar-default .navbar-brand{
+    color: #fff;
+    font-size: 40px;
+    padding-top: 17px;
+    padding-left: 20px;
+}
+.navbar-default .navbar-brand:hover{
+    color: #341610;
+    cursor: pointer;
+}
+#navbarCollapse > ul > li > a:nth-child(1):active{
+    background: rgba(255,255,255,0.6);
+}
+
+/*Home section will be of Jumbotron
+style the button and make it as hover state*/
+#home{
+    margin-top: 100px;
+    margin-bottom: 110px;
+    background: transparent;
+    color: #fff;
+/*     z-index: -1;*/
+/*    text-align: center;*/
+}
+
+#home h1{
+    font-size: 100px;
+    margin-left: -10px;
+}
+#home h2{
+    font-size: 50px;
+    margin-top: 20px;;
+/*    margin-left: 20px;*/
+}
+
+#home .btn{
+    background: transparent;
+    color: #fff;
+    font-size: 25px;
+    border-radius: 10px;
+    margin-left: -2px;
+    margin-top: 17px;
+    padding: 10px 15px;
+}
+#home .btn:hover{
+    background: rgba(255,255,255,0.6);
+    color: #341610;
+}
+
+/*About section -add padding to the container for scrollspy
+change width of the container
+for large devices make its max width as 1000px
+style the icons*/
+.container{
+    max-width: 1000px;
+}
+
+#about{
+    padding-top: 100px;
+/*    margin-bottom: 200px;*/
+    
+}
+.col-md-4{
+    color: #ffff;
+    text-align: center;
+    font-size: 15px;
+/*    top: -80px;*/
+}
+.col-md-4 > h2{
+    font-size: 40px;
+    font-weight: bold;
+}
+.col-md-4 > p{
+    font-family:cursive;
+    margin-top: 10px;
+}
+.col-md-4 > p:hover{
+    background: rgba(255,245,236,0.2);
+}
+#callbutton{
+    background: transparent;
+    color: #fff;
+    font-size: 25px;
+    border-radius: 10px;
+    margin-left: -2px;
+    margin-top: 25px;
+    padding: 10px 15px;
+    font-family:sofia;
+}
+#callbutton:hover{
+    background: rgba(255,255,255,0.6);
+    color: #341610;
+    text-decoration: none;
+}
+
+.images{
+    height: 200px;
+    width: 200px;
+}
+/*
+.images:hover{
+    height: 50px;
+    width: 50px;
+}
+*/
+
+
+/*Promise
+add padding to the container for scrollspy
+set the width of carousel
+set the height of picture in carousel
+move the captions under the carousel
+*/
+
+#promise{
+    padding-top: 100px;
+}
+#myCarousel{
+    width: 100%;
+    margin: 0px auto;
+    text-align: center;
+}
+/*
+.carousel-inner .item img{
+    height: 400px;
+    margin: 0 auto;
+}
+*/
+/*
+.carousel-caption{
+    position: relative;
+    left:auto;
+    right: auto;
+    height: 100px;
+}
+*/
+/*style the nav brand for different sizes*/
+
+@media (max-width:768px){
+    
+/*
+    .carousel-inner .item img{
+        height: 300px;
+    }
+*/
+    .carousel-inner h2{
+        font-size: 23px;
+    }
+
+}
+@media (max-width:400px){
+    
+/*
+    .carousel-inner .item img{
+        height: 300px;
+    }
+*/
+    .carousel-inner h2{
+        font-size: 17px;
+    }
+    
+    .navbar-brand{
+        font-size: 12px;
+    }
+}
+/*
+footer
+create footer using footer
+make background white
+change font color
+*/
+.footer{
+    background: rgba(0,0,0,0.5);
+    color: white;
+    padding: 40px 0px;
+    margin-top: 100px;
+    font-size: 15px;
+}
